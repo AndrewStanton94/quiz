@@ -20,10 +20,3 @@ Route::get('/', function () {
 Route::get('/quizzes', 'QuizController@show');
 Route::post('/quizzes', 'QuizController@create');
 
-Route::get('/test', function () {
-	echo "Yo";
-	$users = DB::connection('mysql')->select('SELECT * FROM  `Answer`');
-	echo implode(', ', $users);
-	echo count($users);
-	echo "lo";
-});
