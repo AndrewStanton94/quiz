@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/quizzes', 'QuizController@show');
 Route::post('/quizzes', 'QuizController@create');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
